@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style> 
+@import url('https://fonts.cdnfonts.com/css/under-the-weather');
+@import url('https://fonts.cdnfonts.com/css/valentine-2');
+
+body {
+  margin: 0;
+  text-align: center;
+}
+
+header {
+    background: pink;
+    padding: 10px;
+    font-family: 'Under the Weather', sans-serif;
+    font-size: 60px;                                       
+}
+
+.kitty {
+    width: 10%;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;                                    
+}
+
+.container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: pink;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.valentines-day {
+  position: relative;
+  cursor: pointer;
+}
+
+.envelope {
+  position: relative;
+}
+
+.envelope:before {
+  content:"";
+  position: absolute;
+  width:254px;
+  height:254px;
+  background-color: #f19b9b;
+  transform: rotate(-45deg);
+  border-radius: 0 15px 0 0;
+  left:-37px;
+  top:-82px;
+}
+
+.envelope:after {
+  content:"";
+  position: absolute;
+  background-color: #f88181;
+  width:360px;
+  height:225px;
+  left:-90px;
+  top:45px;
+}
+
+.heart {
+  position: relative;
+  background-color: #e01911;
+  display: inline-block;
+  height: 180px;
+  top:50px;
+  left:0;
+  transform: rotate(-45deg);
+  width:180px;
+  filter: drop-shadow(0 -10px 25px rgba(0,0,0,.3));
+  transition: .5s;
+}
+  
+.heart:before, .heart:after {
+  content:"";
+  background-color: #e01911;
+  border-radius:50%;
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  }
+  
+.heart:before {
+  top:-100px;
+  left:0;}
+  
+.heart:after {
+  left:100px;
+  top:0;}
+
+.front {
+  position: absolute;
+  width:0;
+  height:0;
+  border-right: 190px solid #f09c9c;
+  border-top: 113px solid transparent;
+  border-bottom: 113px solid transparent;
+  top:44px;
+  left:80px;
+  z-index:4;
+}
+
+.front:before {
+  content:"";
+  position: absolute;
+  width:0;
+  height:0;
+  border-left: 190px solid #f09c9c;
+  border-top: 113px solid transparent;
+  border-bottom: 113px solid transparent;
+  top:-113px;
+  left:-170px;
+}
+
+.front:after {
+  width:0;
+  height:0;
+  position: absolute;
+  content:"";
+  border-bottom: 150px solid #f7a0a8;
+  border-right:180px solid transparent;
+  border-left: 180px solid transparent;
+  top:-36px;
+  left:-170px;
+}
+
+.text {
+  position: absolute;
+  font-family: arial;
+  letter-spacing:5px;
+  text-align: center;
+  color: white;
+  z-index:2;
+  top:30px;
+  left:10px;
+  transition: .5s;
+}
+
+.valentines-day:hover .heart {
+  transform: translateY(-50px) rotate(-45deg);
+}
+
+.valentines-day:hover .text {
+  transform: translateY(-50px);
+}
+
+.text2 {
+  position: absolute;
+  top:275px;
+  color: white;
+  text-align: center;
+  width:195px;
+  font-size:20px;
+}
+
+.slideshow-container {
+   
+    max-width: 300px;
+    position: relative;
+    margin: auto;
+  }
+  .slide {
+    display: none;
+  }
+  .slide img {
+    width: 100%;
+    border: 5px solid pink;
+    height: auto;
+  }
+
+
+
+
+</style>
+
+<body>
+    <header> <img src="kitty.gif"  class="kitty"> 
+        YEHEYYYYY
+       <img src="kitty.gif"  class="kitty"> 
+</header>
+
+<h1> HAPPY VALENTINE'S DAY <br>LOVE LOVE</h1>
+
+<div class="container">
+<div id="con">
+<div class="valentines-day">
+    <div class="envelope"></div>
+    <div class="heart"></div>
+    <div class="text">
+        ILOVEYOU SO MUCH <br> Galingan mo palagi, mahal na mahal kita.<br>
+        mwaaa mwaaaaa
+    
+    </div>
+    <div class="front"></div>
+</div>
+</div>
+
+
+</div>
+
+<div id="emo">HIII GANDAA <br> 😘😘😘😘😘😘</div>
+
+<div class="slideshow-container">
+    <div class="slide fade">
+      <img src="pic1.jpg" alt="Slide 1">
+    </div>
+    <div class="slide fade">
+      <img src="pic2.jpg" alt="Slide 2">
+    </div>
+    <div class="slide fade">
+      <img src="pic3.jpg" alt="Slide 3">
+    </div>
+    <div class="slide fade">
+        <img src="pic4.jpg" alt="Slide 3">
+      </div>
+  </div>
+
+  <a href="pflower.html">
+  <button class="btn"> FOR YOU :></button>
+  </a>
+
+<script>
+var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var slides = document.getElementsByClassName("slide");
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+</script>
+
+
+
+    
+</body>
+</html>
